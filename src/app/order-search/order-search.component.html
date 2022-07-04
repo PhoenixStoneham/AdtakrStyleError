@@ -11,6 +11,16 @@
 </mat-form-field>
 
 <button mat-button (click)="search()">Search</button>
-<!--<mat-form-field>
-    <mat-table></mat-table>
-</mat-form-field>-->
+<mat-table [dataSource]="Results"> 
+    <ng-container matColumnDef="ordernr">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.ordernr}} </td>
+      </ng-container>
+      
+    <ng-container matColumnDef="credate">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.credate}} </td>
+      </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+  <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+</mat-table>
