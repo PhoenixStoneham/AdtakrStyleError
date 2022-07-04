@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { makeVar } from '@apollo/client/core';
-import { Apollo, gql } from 'apollo-angular';
 import { Order } from '../entities/OrderEntity';
 
 type Variables = { start?: string, end?: string }
@@ -12,7 +10,7 @@ type Variables = { start?: string, end?: string }
 })
 export class OrderSearchComponent implements OnInit {
 
-  constructor(private apollo: Apollo) { }
+  constructor() { }
   
   public start = new Date();
   public end = new Date();
