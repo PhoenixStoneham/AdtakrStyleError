@@ -1,0 +1,8 @@
+<nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
+<a routerLink="/PrintSearch">Print Search</a>
+<a routerLink="/OrderSearch">Order Search</a>
+</nav>
+<mat-tab-nav-panel #tabPanel>
+  <router-outlet></router-outlet>
+</mat-tab-nav-panel>
+
